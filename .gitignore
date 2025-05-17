@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+*.egg-info
+.env
+
+# PowerShell
+*.ps1xml
+*.psm1
+*.log
+
+# Power BI
+*.pbix
+
+# IDE
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+*.bak

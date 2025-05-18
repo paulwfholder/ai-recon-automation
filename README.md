@@ -2,46 +2,68 @@
 
 # AI-Augmented Recon Toolkit
 
-This project automates reconnaissance for ethical hacking and vulnerability management using PowerShell and Python. It includes automated host discovery, Nmap/Nuclei scanning, markdown reporting, and Power BI dashboard visualization — all structured around secure development standards (Microsoft SDL & CIS Benchmarks).
+This project automates reconnaissance for ethical hacking and vulnerability management using PowerShell and Python.  
+It includes automated host discovery, Nmap / Nuclei scanning, markdown reporting, and Power BI dashboard visualization—all structured around Microsoft SDL & CIS Level-1 practices.
 
 ---
 
 ## 🔧 Core Features
-
-- **Automated Host Discovery** with PowerShell and Python
-- **Vulnerability Scanning** using Nmap and Nuclei
-- **AI-Assisted Reporting** using Claude and ChatGPT for triage and summaries
-- **Secure Scripting Practices** based on SDL and CIS
-- **Power BI Visualization** of synthetic scan results
-- **Version Control & Documentation** with GitHub and Markdown
+- **Automated Host Discovery** (PowerShell / Python)  
+- **Vulnerability Scanning** with Nmap and Nuclei  
+- **AI-Assisted Reporting** using Claude / ChatGPT for triage & summaries  
+- **Secure Scripting** aligned to SDL + CIS benchmarks  
+- **Power BI Visualization** of synthetic scan results  
+- **Version Control & Documentation** via GitHub & Markdown
 
 ---
 
 ## 📂 Project Structure
+```
+scripts/ # PowerShell and Python automation scripts
 
-## 📂 scripts/ # PowerShell and Python automation scripts
+tests/ # Unit tests and script validation (Pester, Python)
 
-## 📂 tests/ # Unit tests and script validation (Pester, Python)
+PowerBI/ # Dashboard files (.pbix) or screenshots
 
-## 📂 PowerBI/ # Dashboard files (.pbix) or screenshots
+images/ # CLI output, charts, or data visualizations
 
-## 📂 images/ # CLI output, charts, or data visualizations
+reports/ # Generated markdown reports
 
 example_report.md # Sample output from the toolkit
+
 README.md # You are here
+```
 
 ---
 
 ## 🎓 Learning Track
-
-This project was developed alongside a published [Microsoft Learn Plan](https://learn.microsoft.com/) titled:
-
-> **AI-Augmented Recon Automation with PowerShell and Python**  
-> _Author: d1sc1pl3 (pseudonym) | Status: Published May 2025_
-
-The plan includes 5 milestones focused on SDL compliance, GitHub hardening, DevOps validation, Azure security, and Power BI reporting.
+This project accompanies the published Microsoft Learn plan:  
+**AI-Augmented Recon Automation with PowerShell and Python**  
+_Published May 2025 • pseudonym author `d1sc1pl3`_  
+Plan URL ➜ <https://learn.microsoft.com/en-us/plans/y2wdcet30qqz67>
 
 ---
+
+## Roadmap
+- [x] Publish Microsoft Learn plan  
+- [x] Public GitHub repo with secure structure  
+- [ ] Tenable Compliance Export API hook (CIS-L1)  
+- [ ] Power BI dashboard (.pbix) demo  
+
+---
+
+## Quick Start
+```
+# PowerShell ping sweep
+.\scripts\host_discovery.ps1 -Targets target_list.txt
+```
+
+```
+# Python Nmap scan
+python scripts/recon_scan.py target_list.txt
+```
+Output files are written to the **reports/** folder.
+
 
 ## 🚀 Getting Started (Example Use Case)
 

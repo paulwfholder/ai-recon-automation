@@ -27,7 +27,13 @@ os.makedirs("reports", exist_ok=True)
 with open("reports/nmap_report.md", "w", encoding="utf-8") as report:
     for host in targets:
         print(f"[+] Scanning {host} …")
-        result = subprocess.check_output(["nmap", "-sV", host], text=True, encoding="utf-8")
+        # Unprivileged, faster TCP connect scan
+        result = subprocess.check_output(
+            ["nmap", "--unprivileged", "-sT", "-sV", "-T4", "--top-ports", "100", host],
+            text=True,
+            encoding="utf-8",
+        )
         report.write(f"## {host}\n```\n{result}\n```\n")
 
 print("[✓] Scan complete — see reports/nmap_report.md")
+

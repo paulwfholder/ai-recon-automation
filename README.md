@@ -62,6 +62,9 @@ Plan URL ➜ <https://learn.microsoft.com/en-us/plans/y2wdcet30qqz67>
 # Python Nmap scan
 python scripts/recon_scan.py target_list.txt
 ```
+![CLI demo](images/cli_demo.png)
+
+
 Output files are written to the **reports/** folder.
 
 

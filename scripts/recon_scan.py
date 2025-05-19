@@ -1,11 +1,33 @@
 # Recon Scan
 
 #!/usr/bin/env python3
-import sys, subprocess, pathlib, os
+"""
+Minimal Nmap wrapper:
+    python recon_scan.py target_list.txt
+Creates: reports/nmap_report.md
+"""
 
-targets = pathlib.Path(sys.argv[1]).read_text().splitlines()
+import sys
+import subprocess
+import pathlib
+import os
+
+if len(sys.argv) != 2:
+    print("Usage: python recon_scan.py target_list.txt")
+    sys.exit(1)
+
+target_file = pathlib.Path(sys.argv[1])
+if not target_file.exists():
+    print(f"[!] Target file {target_file} not found.")
+    sys.exit(1)
+
+targets = target_file.read_text().splitlines()
 os.makedirs("reports", exist_ok=True)
-with open("reports/nmap_report.md", "w") as report:
+
+with open("reports/nmap_report.md", "w", encoding="utf-8") as report:
     for host in targets:
-        result = subprocess.check_output(["nmap", "-sV", host]).decode()
+        print(f"[+] Scanning {host} …")
+        result = subprocess.check_output(["nmap", "-sV", host], text=True, encoding="utf-8")
         report.write(f"## {host}\n```\n{result}\n```\n")
+
+print("[✓] Scan complete — see reports/nmap_report.md")

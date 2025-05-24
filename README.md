@@ -39,7 +39,7 @@ README.md # You are here
 ## 🎓 Learning Track
 This project accompanies the published Microsoft Learn plan:  
 **AI-Augmented Recon Automation with PowerShell and Python**  
-_Published May 2025 • pseudonym author `d1sc1pl3`_  
+_Published May 2025 • pseudonym author `disc1pl3`_  
 Plan URL ➜ <https://learn.microsoft.com/en-us/plans/y2wdcet30qqz67>
 
 ---
